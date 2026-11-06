@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GIA 💔</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #080808;
+      color: #f7f4f1;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      width: min(100%, 480px);
+      min-height: 100vh;
+      margin: auto;
+      padding-bottom: 32px;
+      background: #080808;
+    }
+
+    .hero {
+      height: 680px;
+      max-height: 82vh;
+      min-height: 520px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+
+    /* Fondu de la photo vers le fond noir */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 45%,
+        rgba(8, 8, 8, .45) 72%,
+        #080808 100%
+      );
+    }
+
+    .profile {
+      position: absolute;
+      z-index: 1;
+      bottom: 28px;
+      width: 100%;
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font: 46px Georgia, serif;
+      letter-spacing: 3px;
+    }
+
+    .username {
+      margin: 8px 0;
+      color: #d3ccc5;
+      letter-spacing: 2px;
+    }
+
+    .description {
+      margin: 0;
+      color: #d3ccc5;
+      font: italic 16px Georgia, serif;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 8px 0 32px;
+    }
+
+    .social {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      transition: transform .2s ease;
+    }
+
+    .social:hover {
+      transform: translateY(-3px);
+    }
+
+    .social svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .instagram {
+      background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #8134af, #515bd4);
+    }
+
+    .telegram { background: #229ed9; }
+    .tiktok { background: #171717; }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 20px;
+      padding: 13px;
+      border: 1px solid #755e43;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #1b1917, #101010);
+      color: white;
+      text-decoration: none;
+    }
+
+    .feature img {
+      width: 68px;
+      height: 68px;
+      flex: 0 0 68px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .feature-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .feature-title {
+      display: block;
+      margin-bottom: 5px;
+      font: 18px Georgia, serif;
+    }
+
+    .feature-description {
+      display: block;
+      color: #bcb5ae;
+      font-size: 13px;
+    }
+
+    .arrow {
+      color: #d7b889;
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <!-- Ta grande photo -->
+      <img src="images/hero.jpg" alt="Photo de GIA">
+
+      <div class="profile">
+        <h1>GIA 💔</h1>
+        <p class="username">@emmadefava</p>
+        <p class="description">Dream girl, model, law student</p>
+      </div>
+    </section>
+
+    <!-- Remplace chaque adresse par le lien de ton compte -->
+    <nav class="socials" aria-label="Mes réseaux sociaux">
+      <a class="social instagram"
+         href="https://www.instagram.com/TON_COMPTE/"
+         aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="2"/>
+          <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+          <circle cx="18" cy="6.5" r="1.2" fill="white"/>
+        </svg>
+      </a>
+
+      <a class="social telegram"
+         href="https://t.me/TON_COMPTE"
+         aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+          <path d="M21.7 4.4 18.5 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L6 13.6 1.1 12c-1.1-.3-1.1-1 .2-1.5L20.4 3c.9-.3 1.7.2 1.3 1.4Z"/>
+        </svg>
+      </a>
+
+      <a class="social tiktok"
+         href="https://www.tiktok.com/@TON_COMPTE"
+         aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M14 3v11.2a4.2 4.2 0 1 1-3.5-4.1M16 5.2c.8 2 2.3 3.4 4.5 3.8"
+                stroke="#25F4EE" stroke-width="3" stroke-linecap="round"/>
+          <path d="M14 3v11.2a4.2 4.2 0 1 1-3.5-4.1M16 5.2c.8 2 2.3 3.4 4.5 3.8"
+                stroke="#FE2C55" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M14 3v11.2a4.2 4.2 0 1 1-3.5-4.1M16 5.2c.8 2 2.3 3.4 4.5 3.8"
+                stroke="white" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </nav>
+
+    <!-- Tout le rectangle est cliquable : remplace le lien Telegram et le texte -->
+    <a class="feature" href="https://t.me/TON_LIEN"
+       target="_blank" rel="noopener noreferrer">
+      <img src="images/telegram.jpg" alt="">
+      <span class="feature-text">
+        <span class="feature-title">TON TITRE ICI</span>
+        <span class="feature-description">Ta description ici</span>
+      </span>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+  </main>
+</body>
+</html>
