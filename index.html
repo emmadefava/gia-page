@@ -23,11 +23,10 @@
       background: #000;
     }
 
-    /* Photo plus petite avec fondu vers le noir */
+    /* Photo carrée avec fondu vers le noir */
     .hero {
-      height: 400px;
-      max-height: 50vh;
-      min-height: 320px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
       position: relative;
       overflow: hidden;
     }
@@ -113,11 +112,11 @@
     .feature {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin: 0 22px;
-      padding: 16px;
+      gap: 12px;
+      margin: 0 16px;
+      padding: 10px;
       border: none;
-      border-radius: 26px;
+      border-radius: 20px;
       background: linear-gradient(
         120deg,
         rgba(120, 100, 85, .45) 0%,
@@ -131,10 +130,10 @@
     }
 
     .feature img {
-      width: 62px;
-      height: 62px;
-      flex: 0 0 62px;
-      border-radius: 12px;
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      border-radius: 10px;
       object-fit: cover;
     }
 
@@ -145,8 +144,8 @@
 
     .feature-title {
       display: block;
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 600;
     }
   </style>
 </head>
